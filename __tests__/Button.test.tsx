@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import Button, { ButtonProps } from '@/pages/components/Button';
+import Button, { ButtonProps } from '@/src/pages/components/Button';
 
 jest.mock('next/link', () => {
     const MockLink = ({ children, href }: ButtonProps) => <a href={href}>{children}</a>;

@@ -13,12 +13,16 @@ const Button: React.FC<ButtonProps> = ({
     href,
 }) => {
     return (
-        <Link
-            className={`${newclassNames}`}
-            href={href}
-        >
-            {children}
-        </Link>
+        <>
+            {children &&
+                <Link
+                    className={`${newclassNames}`}
+                    href={href ?? ''}
+                >
+                    {children}
+                </Link>}
+        </>
+
     );
 };
 
