@@ -1,8 +1,9 @@
 import Homepage from "../pages/Homepage";
 
-
-export default function Home() {
+const Home: React.FC = () => {
   return (
-    <Homepage data="Hego World" />
+    <Homepage />
   );
 }
+
+export default Home;
