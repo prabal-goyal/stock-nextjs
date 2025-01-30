@@ -8,7 +8,7 @@ const Header: React.FC = () => {
     return (
         <div className="bg-[#002B5B] text-white">
             <Container newClassNames="py-6 flex justify-between items-center">
-                <h3 className="text-3xl font-semibold hover:text=[#00FFFF]">FalseStreet</h3>
+                <Link href='/' className="text-3xl font-semibold hover:text=[#00FFFF] cursor-pointer">FalseStreet</Link>
                 <div className="flex gap-8">
                     <Button href="/" newclassNames="hover:underline">Home</Button>
                     <HoverCard>
