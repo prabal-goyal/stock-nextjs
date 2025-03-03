@@ -20,7 +20,8 @@ const Button: React.FC<ButtonProps> = ({
                     href={href ?? ''}
                 >
                     {children}
-                </Link>}
+                </Link>
+            }
         </>
 
     );

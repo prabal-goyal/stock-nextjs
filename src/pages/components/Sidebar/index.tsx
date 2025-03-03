@@ -23,7 +23,7 @@ const sideBar = [
 
 const Sidebar: React.FC = () => {
     return (
-        <div className="w-64 bg-gray-300 min-h-screen p-8">
+        <div className="w-64 bg-gray-300 min-h-screen p-8 md:block hidden">
             <div className="flex flex-col gap-4">
                 {sideBar.map((item) => (
                     <a href={item?.link} key={item?.id} className="flex items-center gap-4 rounded-sm hover:underline">
