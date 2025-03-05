@@ -1,5 +1,5 @@
 import WhishlistPage from '@/src/pages/Whishlist';
-import { categories } from '../../data/categories';
+import { categories } from '@/src/data/categories';
 
 export default function Home() {
     const symbols = categories?.flatMap(category => category?.items?.map(stock => stock.symbol));

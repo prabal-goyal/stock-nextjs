@@ -8,9 +8,8 @@ interface WishlistPageProps {
 
 export default function WishlistPage({ symbols }: WishlistPageProps) {
     const data = useFinhubWebSocket(symbols);
-
     return (
-        <div className="grid md:grid-cols-4 grid-cols-2 gap-6 p-6 bg-white dark:bg-gray-900">
+        <div className="grid md:grid-cols-3 grid-cols-1 gap-6 p-6 bg-white dark:bg-gray-900">
             {symbols?.map((symbol, index) => {
                 const stockData = data[symbol] || { price: null, volume: null };
                 return (
