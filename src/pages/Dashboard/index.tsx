@@ -1,6 +1,6 @@
 import React from "react";
 import Container from "../components/Container";
-import { stockMarketData } from "@/src/app/data/stocks";
+import { stockMarketData } from "@/src/data/stocks";
 
 const Dashboard: React.FC = () => {
     return (

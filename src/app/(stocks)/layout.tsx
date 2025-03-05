@@ -21,7 +21,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <div lang="en" className={`${lato.className} flex`}>
+        <div lang="en" className={`${lato.className} flex w-full`}>
             <Sidebar />
             {children}
         </div>
