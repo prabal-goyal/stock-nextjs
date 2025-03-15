@@ -1,107 +1,47 @@
 export const categories = [
-    {
-        id: 1,
-        name: "Indices",
-        items: [
-            { id: 101, name: "S&P 500", symbol: "SPX" },
-            { id: 102, name: "Dow Jones Industrial Average", symbol: "DJI" },
-            { id: 103, name: "Nasdaq Composite", symbol: "IXIC" },
-            { id: 104, name: "Russell 2000", symbol: "RUT" },
-            { id: 105, name: "VIX (Volatility Index)", symbol: "VIX" }
-        ]
-    },
-    {
-        id: 2,
-        name: "Technology",
-        items: [
-            { id: 201, name: "Apple", symbol: "AAPL" },
-            { id: 202, name: "Microsoft", symbol: "MSFT" },
-            { id: 203, name: "Alphabet (Google) Class A", symbol: "GOOGL" },
-            { id: 204, name: "Amazon", symbol: "AMZN" },
-            { id: 205, name: "Nvidia", symbol: "NVDA" },
-            { id: 206, name: "Meta (Facebook)", symbol: "META" },
-            { id: 207, name: "Tesla", symbol: "TSLA" },
-            { id: 208, name: "Broadcom", symbol: "AVGO" },
-            { id: 209, name: "Advanced Micro Devices", symbol: "AMD" },
-            { id: 210, name: "Oracle", symbol: "ORCL" }
-        ]
-    },
-    {
-        id: 3,
-        name: "Financials",
-        items: [
-            { id: 301, name: "JPMorgan Chase", symbol: "JPM" },
-            { id: 302, name: "Goldman Sachs", symbol: "GS" },
-            { id: 303, name: "Bank of America", symbol: "BAC" },
-            { id: 304, name: "Wells Fargo", symbol: "WFC" },
-            { id: 305, name: "Morgan Stanley", symbol: "MS" }
-        ]
-    },
-    {
-        id: 4,
-        name: "Healthcare",
-        items: [
-            { id: 401, name: "UnitedHealth Group", symbol: "UNH" },
-            { id: 402, name: "Eli Lilly", symbol: "LLY" },
-            { id: 403, name: "Johnson & Johnson", symbol: "JNJ" },
-            { id: 404, name: "Pfizer", symbol: "PFE" },
-            { id: 405, name: "Merck & Co.", symbol: "MRK" }
-        ]
-    },
-    {
-        id: 5,
-        name: "Consumer Discretionary",
-        items: [
-            { id: 501, name: "Nike", symbol: "NKE" },
-            { id: 502, name: "McDonald's", symbol: "MCD" },
-            { id: 503, name: "Amazon", symbol: "AMZN" },
-            { id: 504, name: "Home Depot", symbol: "HD" },
-            { id: 505, name: "Tesla", symbol: "TSLA" }
-        ]
-    },
-    {
-        id: 6,
-        name: "Consumer Staples",
-        items: [
-            { id: 601, name: "Coca-Cola", symbol: "KO" },
-            { id: 602, name: "PepsiCo", symbol: "PEP" },
-            { id: 603, name: "Procter & Gamble", symbol: "PG" },
-            { id: 604, name: "Costco", symbol: "COST" },
-            { id: 605, name: "Walmart", symbol: "WMT" }
-        ]
-    },
-    {
-        id: 7,
-        name: "Energy",
-        items: [
-            { id: 701, name: "ExxonMobil", symbol: "XOM" },
-            { id: 702, name: "Chevron", symbol: "CVX" },
-            { id: 703, name: "ConocoPhillips", symbol: "COP" }
-        ]
-    },
-    {
-        id: 8,
-        name: "Industrials",
-        items: [
-            { id: 801, name: "Boeing", symbol: "BA" },
-            { id: 802, name: "General Electric", symbol: "GE" },
-            { id: 803, name: "Caterpillar", symbol: "CAT" },
-            { id: 804, name: "Union Pacific", symbol: "UNP" }
-        ]
-    },
-    {
-        id: 9,
-        name: "Utilities",
-        items: [
-            { id: 901, name: "NextEra Energy", symbol: "NEE" },
-            { id: 902, name: "Duke Energy", symbol: "DUK" }
-        ]
-    },
-    {
-        id: 10,
-        name: "Real Estate",
-        items: [
-            { id: 1001, name: "Prologis", symbol: "PLD" }
-        ]
-    }
+    { id: 101, name: "S&P 500", symbol: "SPX", category: "Indices" },
+    { id: 102, name: "Dow Jones Industrial Average", symbol: "DJI", category: "Indices" },
+    { id: 103, name: "Nasdaq Composite", symbol: "IXIC", category: "Indices" },
+    { id: 104, name: "Russell 2000", symbol: "RUT", category: "Indices" },
+    { id: 105, name: "VIX (Volatility Index)", symbol: "VIX", category: "Indices" },
+    { id: 201, name: "Apple", symbol: "AAPL", category: "Technology" },
+    { id: 202, name: "Microsoft", symbol: "MSFT", category: "Technology" },
+    { id: 203, name: "Alphabet (Google) Class A", symbol: "GOOGL", category: "Technology" },
+    { id: 204, name: "Amazon", symbol: "AMZN", category: "Technology" },
+    { id: 205, name: "Nvidia", symbol: "NVDA", category: "Technology" },
+    { id: 206, name: "Meta (Facebook)", symbol: "META", category: "Technology" },
+    { id: 207, name: "Tesla", symbol: "TSLA", category: "Technology" },
+    { id: 208, name: "Broadcom", symbol: "AVGO", category: "Technology" },
+    { id: 209, name: "Advanced Micro Devices", symbol: "AMD", category: "Technology" },
+    { id: 210, name: "Oracle", symbol: "ORCL", category: "Technology" },
+    { id: 301, name: "JPMorgan Chase", symbol: "JPM", category: "Financials" },
+    { id: 302, name: "Goldman Sachs", symbol: "GS", category: "Financials" },
+    { id: 303, name: "Bank of America", symbol: "BAC", category: "Financials" },
+    { id: 304, name: "Wells Fargo", symbol: "WFC", category: "Financials" },
+    { id: 305, name: "Morgan Stanley", symbol: "MS", category: "Financials" },
+    { id: 401, name: "UnitedHealth Group", symbol: "UNH", category: "Healthcare" },
+    { id: 402, name: "Eli Lilly", symbol: "LLY", category: "Healthcare" },
+    { id: 403, name: "Johnson & Johnson", symbol: "JNJ", category: "Healthcare" },
+    { id: 404, name: "Pfizer", symbol: "PFE", category: "Healthcare" },
+    { id: 405, name: "Merck & Co.", symbol: "MRK", category: "Healthcare" },
+    { id: 501, name: "Nike", symbol: "NKE", category: "Consumer Discretionary" },
+    { id: 502, name: "McDonald's", symbol: "MCD", category: "Consumer Discretionary" },
+    { id: 503, name: "Amazon", symbol: "AMZN", category: "Consumer Discretionary" },
+    { id: 504, name: "Home Depot", symbol: "HD", category: "Consumer Discretionary" },
+    { id: 505, name: "Tesla", symbol: "TSLA", category: "Consumer Discretionary" },
+    { id: 601, name: "Coca-Cola", symbol: "KO", category: "Consumer Staples" },
+    { id: 602, name: "PepsiCo", symbol: "PEP", category: "Consumer Staples" },
+    { id: 603, name: "Procter & Gamble", symbol: "PG", category: "Consumer Staples" },
+    { id: 604, name: "Costco", symbol: "COST", category: "Consumer Staples" },
+    { id: 605, name: "Walmart", symbol: "WMT", category: "Consumer Staples" },
+    { id: 701, name: "ExxonMobil", symbol: "XOM", category: "Energy" },
+    { id: 702, name: "Chevron", symbol: "CVX", category: "Energy" },
+    { id: 703, name: "ConocoPhillips", symbol: "COP", category: "Energy" },
+    { id: 801, name: "Boeing", symbol: "BA", category: "Industrials" },
+    { id: 802, name: "General Electric", symbol: "GE", category: "Industrials" },
+    { id: 803, name: "Caterpillar", symbol: "CAT", category: "Industrials" },
+    { id: 804, name: "Union Pacific", symbol: "UNP", category: "Industrials" },
+    { id: 901, name: "NextEra Energy", symbol: "NEE", category: "Utilities" },
+    { id: 902, name: "Duke Energy", symbol: "DUK", category: "Utilities" },
+    { id: 1001, name: "Prologis", symbol: "PLD", category: "Real Estate" }
 ];
