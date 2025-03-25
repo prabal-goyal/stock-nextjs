@@ -49,7 +49,7 @@ const StockCard: React.FC<StockCardProps> = ({
         {/* Price Change Info */}
         <div className="mt-2">
           <p className={`text-sm font-medium ${isPositive ? "text-green-500" : "text-red-500"}`}>
-            {isPositive ? "+" : "-"}${Math.abs(priceChange)?.toFixed(2)} ({Math.abs(percentageChange)?.toFixed(2)}%)
+            {/* {isPositive ? "+" : "-"}${Math.abs(priceChange)?.toFixed(2)} ({Math.abs(percentageChange)?.toFixed(2)}%) */}
           </p>
         </div>
 

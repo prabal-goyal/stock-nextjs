@@ -4,6 +4,7 @@ import { useFinhubWebSocket } from "@/src/hooks/useFinhubbWebsocket";
 import StockCard from "@/src/pages/components/StockCard";
 import { useMemo, useState } from "react";
 import Category from "../components/Category";
+import Link from "next/link";
 
 export default function WishlistPage() {
     const symbols = categories?.map((category) => category.symbol);
@@ -26,7 +27,7 @@ export default function WishlistPage() {
     }, [activeCategory, categories]);
 
     return (
-        <div className="p-6 bg-white dark:bg-gray-900">
+        <div className="p-6 min-h-screen bg-white dark:bg-gray-900">
             {/* Category Selection */}
             <Category
                 categories={categoryArray}
@@ -34,22 +35,23 @@ export default function WishlistPage() {
                 onCategorySelect={handleCategoryChange}
             />
             {/* Stock Cards */}
-            <div className="grid md:grid-cols-3 grid-cols-1 gap-6">
+            <div className="grid md:grid-cols-3 grid-cols-1 gap-6 mt-12">
                 {filteredStocks.map((stock) => {
                     const stockData = data[stock.symbol] || { price: null, volume: null };
                     return (
-                        <StockCard
-                            key={stock.id}
-                            name={stock.name}
-                            symbol={stock.symbol}
-                            currentPrice={stockData.price ?? 0}
-                            priceChange={Math.random() * 10 - 5} // Simulated change
-                            percentageChange={Math.random() * 2 - 1} // Simulated percentage
-                            marketStatus="Open" // Placeholder, replace with actual status
-                            high={stockData.price ? stockData.price * 1.05 : 0} // Simulated high
-                            low={stockData.price ? stockData.price * 0.95 : 0} // Simulated low
-                            volume={stockData.volume ?? 0}
-                        />
+                        <Link href={`/stocks/${stock.symbol}`} key={stock.id}>
+                            <StockCard
+                                name={stock.name}
+                                symbol={stock.symbol}
+                                currentPrice={stockData.price ?? 0}
+                                priceChange={Math.random() * 10 - 5} // Simulated change
+                                percentageChange={Math.random() * 2 - 1} // Simulated percentage
+                                marketStatus="Open" // Placeholder, replace with actual status
+                                high={stockData.price ? stockData.price * 1.05 : 0} // Simulated high
+                                low={stockData.price ? stockData.price * 0.95 : 0} // Simulated low
+                                volume={stockData.volume ?? 0}
+                            />
+                        </Link>
                     );
                 })}
             </div>

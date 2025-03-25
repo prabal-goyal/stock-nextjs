@@ -8,7 +8,7 @@ interface CategoryProps {
 
 const Category: React.FC<CategoryProps> = ({ categories, activeCategory, onCategorySelect }) => {
     return (
-        <div className="flex gap-4 mb-6 overflow-x-auto border-b pb-2">
+        <div className="flex gap-4 mb-6 overflow-x-auto pb-2">
             {categories?.map((category) => (
                 <button
                     key={category}
