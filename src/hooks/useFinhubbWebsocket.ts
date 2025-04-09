@@ -3,7 +3,9 @@ import { useEffect, useState, useRef } from "react";
 import { categories } from "../data/categories";
 
 const FINNHUB_API_KEY = process.env.NEXT_PUBLIC_FINNHUB_API_KEY;
-const FINNHUB_SOCKET_URL = `wss://ws.finnhub.io?token=${FINNHUB_API_KEY}`;
+// const FINNHUB_SOCKET_URL = `wss://ws.finnhub.io?token=${FINNHUB_API_KEY}`;
+const FALSESTREET_SOCKET_URL = `wss://falsestreetsocket.onrender.com/ws`;
+
 
 // Create a mapping of symbols to their categories
 const symbolToCategoryMap = categories?.reduce((map, item) => {
@@ -22,7 +24,7 @@ export function useFinhubWebSocket(symbols: string[]) {
             return;
         }
 
-        const socket = new WebSocket(FINNHUB_SOCKET_URL);
+        const socket = new WebSocket(FALSESTREET_SOCKET_URL);
         socketRef.current = socket;
 
         socket.onopen = () => {

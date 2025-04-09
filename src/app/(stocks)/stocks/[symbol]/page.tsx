@@ -1,14 +1,14 @@
 import React from "react";
 import Stock from "@/src/pages/Stock";
 
-const FINNHUB_API_KEY = "YOUR_FINNHUB_API_KEY";
+const FINNHUB_API_KEY = process.env.NEXT_PUBLIC_FINNHUB_API_KEY;
 
 export default async function StockPage({
   params,
 }: {
-  readonly params: { symbol: string };
+  readonly params: Promise<{ symbol: string }>
 }) {
-  const { symbol } = params;
+  const { symbol } = await params;
 
   // Fetch historical candlestick data (last 1 hour)
   const now = Math.floor(Date.now() / 1000);

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Lato } from "next/font/google";
 import "./globals.css";
 import Header from "../pages/components/Header";
+import { WebSocketProvider } from "../hooks/webSocketProvider";
 
 const lato = Lato({
   weight: ["100", "300", "400", "700", "900"],
@@ -24,7 +25,7 @@ export default function RootLayout({
     <html lang="en" className={lato.className}>
       <body>
         <Header />
-        {children}
+        <WebSocketProvider>{children}</WebSocketProvider>
       </body>
     </html>
   );

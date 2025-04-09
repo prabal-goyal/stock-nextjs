@@ -1,9 +1,4 @@
 export const categories = [
-    { id: 101, name: "S&P 500", symbol: "SPX", category: "Indices" },
-    { id: 102, name: "Dow Jones Industrial Average", symbol: "DJI", category: "Indices" },
-    { id: 103, name: "Nasdaq Composite", symbol: "IXIC", category: "Indices" },
-    { id: 104, name: "Russell 2000", symbol: "RUT", category: "Indices" },
-    { id: 105, name: "VIX (Volatility Index)", symbol: "VIX", category: "Indices" },
     { id: 201, name: "Apple", symbol: "AAPL", category: "Technology" },
     { id: 202, name: "Microsoft", symbol: "MSFT", category: "Technology" },
     { id: 203, name: "Alphabet (Google) Class A", symbol: "GOOGL", category: "Technology" },

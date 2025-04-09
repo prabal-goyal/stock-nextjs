@@ -1,20 +1,31 @@
-import Link from "next/link";
+"use client";
 import React from "react";
-import { DropdownMenu, DropdownMenuContent, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
-import Button from "../Button";
+import {
+    Select,
+    SelectContent,
+    SelectGroup,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+} from "@/components/ui/select"
 
 
 const Dropdown: React.FC = () => {
     return (
-        <DropdownMenu>
-            <DropdownMenuTrigger asChild className="cursor-pointer"><Button href="#">Stocks</Button></DropdownMenuTrigger>
-            <DropdownMenuContent className="bg-white text-black p-4 rounded-md shadow-md flex flex-col gap-4">
-                <Link href="/dashboard" className="hover:underline">Dashboard</Link>
-                <Link href="/" className="hover:underline">Whishlist</Link>
-                <Link href="/" className="hover:underline">Profile</Link>
-                <Link href="/" className="hover:underline">Help</Link>
-            </DropdownMenuContent>
-        </DropdownMenu>
+        <Select >
+            <SelectTrigger className="!p-0">
+                <SelectValue placeholder="Menu" />
+            </SelectTrigger>
+            <SelectContent>
+                <SelectGroup className="cursor-pointer"> 
+                    <SelectItem value="dashboard">Dashboard</SelectItem>
+                    <SelectItem value="banana">Banana</SelectItem>
+                    <SelectItem value="blueberry">Blueberry</SelectItem>
+                    <SelectItem value="grapes">Grapes</SelectItem>
+                    <SelectItem value="pineapple">Pineapple</SelectItem>
+                </SelectGroup>
+            </SelectContent>
+        </Select>
     )
 }
 
