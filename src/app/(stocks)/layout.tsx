@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Lato } from "next/font/google";
 import "./globals.css";
 import AppSidebar from "@/src/pages/components/Sidebar";
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import { SidebarProvider } from "@/components/ui/sidebar";
 
 const lato = Lato({
     weight: ["100", "300", "400", "700", "900"],
@@ -26,7 +26,6 @@ export default function RootLayout({
             <SidebarProvider>
                 <AppSidebar />
                 <main>
-                    <SidebarTrigger />
                     {children}
                 </main>
             </SidebarProvider>

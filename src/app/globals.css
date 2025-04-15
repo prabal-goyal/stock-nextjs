@@ -103,3 +103,14 @@
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
+
+
+:root {
+  --primary: 240 100% 50%;
+  --primary-hover: 240 90% 60%;
+  --background: 0 0% 100%;
+}
+[data-theme="dark"] {
+  --primary: 240 100% 70%;
+  --background: 0 0% 5%;
+}
