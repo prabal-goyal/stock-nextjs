@@ -1,10 +1,10 @@
+"use client";
 import React from "react";
 
-
-const Homepage: React.FC = () => {
+const Stock: React.FC = () => {
     return (
         <></>
-    )
+    );
 };
 
-export default Homepage;
+export default Stock;
