@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Lato } from "next/font/google";
 import "./globals.css";
-import Sidebar from "@/src/pages/components/Sidebar";
+import AppSidebar from "@/src/pages/components/Sidebar";
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 
 const lato = Lato({
     weight: ["100", "300", "400", "700", "900"],
@@ -22,8 +23,13 @@ export default function RootLayout({
 }>) {
     return (
         <div lang="en" className={`${lato.className} flex w-full`}>
-            <Sidebar />
-            {children}
+            <SidebarProvider>
+                <AppSidebar />
+                <main>
+                    <SidebarTrigger />
+                    {children}
+                </main>
+            </SidebarProvider>
         </div>
     );
 }
