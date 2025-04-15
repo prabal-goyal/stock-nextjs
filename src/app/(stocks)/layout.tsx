@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Lato } from "next/font/google";
 import "./globals.css";
 import AppSidebar from "@/src/pages/components/Sidebar";
-import { WebSocketProvider } from "@/src/hooks/webSocketProvider";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 
 const lato = Lato({
@@ -28,7 +27,7 @@ export default function RootLayout({
                 <AppSidebar />
                 <main>
                     <SidebarTrigger />
-                    <WebSocketProvider>{children}</WebSocketProvider>
+                    {children}
                 </main>
             </SidebarProvider>
         </div>
