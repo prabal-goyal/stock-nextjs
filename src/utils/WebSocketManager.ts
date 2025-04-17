@@ -10,7 +10,7 @@ class WebSocketManager {
   private socket: WebSocket | null = null;
   private readonly handlers: Set<MessageHandler> = new Set();
   private reconnectTimeout: NodeJS.Timeout | null = null;
-  private readonly SOCKET_URL = process.env.MEXT_PUBLIC_WEBSOCKET_URI ?? 'wss://falsestreetsocket.onrender.com/ws';
+  private readonly SOCKET_URL = process.env.NEXT_PUBLIC_WEBSOCKET_URI;
   private readonly RECONNECT_DELAY = 3000;
   private readonly broadcastChannel: BroadcastChannel;
 
@@ -26,10 +26,13 @@ class WebSocketManager {
   }
 
   private connect() {
+    if (!this.SOCKET_URL) {
+      throw new Error('SOCKET_URL is not defined');
+    }
     this.socket = new WebSocket(this.SOCKET_URL);
 
     this.socket.addEventListener('open', () => {
-      console.log('WebSocket connected 🚀');
+      console.log('WebSocket connected');
        
     });
 
@@ -53,7 +56,7 @@ class WebSocketManager {
     });
 
     this.socket.addEventListener('close', () => {
-      console.warn('WebSocket disconnected 🛑');
+      console.warn('WebSocket disconnected');
        
       this.reconnect();
     });
@@ -91,7 +94,7 @@ class WebSocketManager {
 
   send(message: any) {
     if (this.socket?.readyState === WebSocket.OPEN) {
-      console.log('Sending message to WebSocket', message);
+      // console.log('Sending message to WebSocket', message);
        
       this.socket.send(JSON.stringify(message));
     } else {
